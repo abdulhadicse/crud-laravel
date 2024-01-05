@@ -1,22 +1,16 @@
-# Laravel specific
-/vendor
 /node_modules
+/public/hot
 /public/storage
 /storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
 Homestead.json
 Homestead.yaml
-.env
-.phpunit.result.cache
-
-# IDE specific
-.idea
-*.iml
-*.iws
-*.ipr
-*.log
-*.swp
-.project
-*.tmproj
-.nbproject
-Thumbs.db
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
 .DS_Store
