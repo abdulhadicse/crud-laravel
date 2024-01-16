@@ -8,10 +8,10 @@
     <title>@yield('title')</title>
 
     {{-- Enqueue all style  --}}
-    @include('styles');
+    @include('styles')
 
     {{-- Push additional styles if needed --}}
-    @stack('custom-styles');
+    @stack('custom-styles')
 </head>
 
 <body>
@@ -158,10 +158,10 @@
         </div>
     </div>
     <!-- Edit Modal HTML -->
-    @include('partials.add-new-employee');
+    @include('partials.add-new-employee')
 
     <!-- Edit Modal HTML -->
-    @include('partials.edit-new-employee');
+    @include('partials.edit-new-employee')
 
     <!-- Delete Modal HTML -->
     <div id="deleteEmployeeModal" class="modal fade">
@@ -186,10 +186,10 @@
         </div>
     </div>
     {{-- Enqueue all scripts --}}
-    @include('scripts');
+    @include('scripts')
 
     {{-- Push additional scripts if needed --}}
-    @stack('custom-scripts');
+    @stack('custom-scripts')
 </body>
 
 </html>
