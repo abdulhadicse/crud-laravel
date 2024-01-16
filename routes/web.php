@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AddNewEmployeeController;
+use App\Exceptions\InvalidOrderException;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +21,9 @@ Route::get(
 		return view( 'layouts.app' );
 	}
 );
+
+// Store new employee record.
+Route::post(
+	'/add-new-employee',
+	array( AddNewEmployeeController::class, 'store' )
+)->name( 'addNewEmployee.store' );

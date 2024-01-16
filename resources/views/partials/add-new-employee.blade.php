@@ -2,7 +2,8 @@
 <div id="addEmployeeModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form>
+            <form method="POST" action="{{ route('addNewEmployee.store') }}">
+                @csrf
                 <div class="modal-header">
                     <h4 class="modal-title">{{ $globalDataText['addEmployee'] ?? 'Add Employee' }}</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -10,19 +11,19 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" class="form-control" required>
+                        <input type="text" class="form-control" name="name" required>
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" required>
+                        <input type="email" class="form-control" name="email" required>
                     </div>
                     <div class="form-group">
                         <label>Address</label>
-                        <textarea class="form-control" required></textarea>
+                        <textarea class="form-control" name="address" required></textarea>
                     </div>
                     <div class="form-group">
                         <label>Phone</label>
-                        <input type="text" class="form-control" required>
+                        <input type="text" class="form-control" name="phone" required>
                     </div>
                 </div>
                 <div class="modal-footer">
